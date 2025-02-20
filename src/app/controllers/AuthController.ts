@@ -3,6 +3,7 @@ import UserCreateService from "../services/user/UserCreateService";
 import UserLoginService from "../services/user/UserLoginService";
 import ForgotPasswordVerifyEmailService from "../services/ForgotPassword/ForgotPasswordVerifyEmailService";
 import ForgotPasswordVerifyOtpService from "../services/ForgotPassword/ForgotPasswordVerifyOtpService";
+import CreateNewPasswordService from "../services/ForgotPassword/CreateNewPasswordService";
 
 
 const register = async (req: Request, res: Response) => {
@@ -20,16 +21,21 @@ const forgotPasswordVerifyEmail = async (req: Request, res: Response) => {
   await ForgotPasswordVerifyEmailService(res, email);
 };
 
-//step-01
+//step-02
 const forgotPasswordVerifyOtp = async (req: Request, res: Response) => {
   await ForgotPasswordVerifyOtpService(res, req.body);
 };
 
+//step-03
+const createNewPassword = async (req: Request, res: Response) => {
+  await CreateNewPasswordService(res, req.body);
+};
 
 
 export {
     register,
     login,
     forgotPasswordVerifyEmail,
-    forgotPasswordVerifyOtp
+    forgotPasswordVerifyOtp,
+    createNewPassword
 }

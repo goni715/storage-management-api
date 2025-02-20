@@ -10,3 +10,9 @@ export interface IVerifyOTp {
     email: string;
     otp: string;
 }
+
+export interface INewPassword {
+    email: string;
+    otp: string;
+    password: string
+}
