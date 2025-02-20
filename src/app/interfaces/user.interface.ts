@@ -4,3 +4,8 @@ export interface IUser {
     password: string;
 }
 
+
+export type TLogin = {
+    email: string;
+    password: string
+}

@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import authRouter from './app/routes/AuthRoutes';
 
 const app: Express = express();
 
@@ -22,6 +23,10 @@ app.use(bodyParser.json());
 app.get("/", (req: Request, res: Response) => {
     res.send("This is Storage Management Server");
 });
+
+
+//application routes
+app.use('/api/v1/auth', authRouter);
 
 
 
