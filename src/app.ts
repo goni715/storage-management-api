@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import authRouter from './app/routes/AuthRoutes';
 import folderRouter from './app/routes/FolderRoutes';
 import fileRouter from './app/routes/FileRoutes';
+import path from "path";
 
 
 const app: Express = express();
@@ -28,10 +29,15 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 
+
 //application routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/folder', folderRouter);
 app.use('/api/v1/file', fileRouter);
+
+
+//serve uploads folder
+app.use("/uploads", express.static(path.join(__dirname, "../uploads",)))
 
 
 
