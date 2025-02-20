@@ -1,4 +1,4 @@
-import { model, Query, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 import { IUser } from "../interfaces/user.interface";
 import hashedPassword from "../utils/hashedPassword";
 import validator from "validator";
