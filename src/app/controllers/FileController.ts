@@ -1,11 +1,13 @@
 import { Request, Response } from "express";
-import DuplicateFileService from "../services/file/DuplicateFileService";
-import RenameFileService from "../services/file/RenameFileService";
-import DeleteService from "../services/common/DeleteService";
+import DuplicateFileService from "../services/file/DuplicateFileFolderService";
 import FileFolderModel from "../models/FileFolderModel";
+import RenameFileFolderService from "../services/file/RenameFileFolderService";
+import DeleteFileService from "../services/file/DeleteFileService";
+import DuplicateFileFolderService from "../services/file/DuplicateFileFolderService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
+    const loginUserId = req.headers.id;
 
     try {
         if(req.file){
@@ -26,55 +28,57 @@ const uploadFile = async (req:Request, res: Response) => {
             type="note"
          }
          
+    
 
-         
-
-            const file = new FileFolderModel({
+            const newFile = {
                 name: req?.file.filename.split('.')[0],
                 filename: req?.file.filename,
                 path: path_url,
                 type,
                 size: req?.file.size,
-            });
+                user: loginUserId
+            };
      
-            await file.save();
-
-
-            res.status(201).json({success: true, message: 'File uploaded successfully', file: path_url });
+             const result = await FileFolderModel.create(newFile)
+            res.status(201).json({success: true, message: 'File uploaded successfully', data: result });
             
         }else{
              res.status(404).json({
                  success: false,
-                 message: "File not found"
+                 message: "Please Provide a file"
              })
-        }
-
-      
-        
+        }   
     } catch (err:any) {
         res.status(500).json({ success: false, message: "Something Went Wrong", error: err.message });
     }
 }
 
 
-const duplicateFile = async (req:Request, res: Response) => {
-    const fileId = req.params.fileId;
-    await DuplicateFileService(res, fileId);
+//common controller function for both file & folder
+//RenameFileFolderService is located at file directory inside the services folder
+const duplicateFileFolder = async (req:Request, res: Response) => {
+    const loginUserId = req.headers.id;
+    const fileFolderId = req.params.fileFolderId;
+    await DuplicateFileFolderService(res, fileFolderId, loginUserId as string);
 }
 
-const renameFile = async (req: Request, res: Response) => {
-    await RenameFileService(res, req.body);
+//common controller function for both file & folder
+//RenameFileFolderService is located at file directory inside the services folder
+const renameFileFolder = async (req: Request, res: Response) => {
+    const loginUserId = req.headers.id;
+    await RenameFileFolderService(res, req.body, loginUserId as string);
 };
   
 const deleteFile = async (req: Request, res: Response) => {
     const deleteId = req.params.fileId;
-    await DeleteService(res, deleteId, FileFolderModel);
+    const loginUserId = req.headers.id;
+    await DeleteFileService(res, deleteId, loginUserId as string);
 };
   
 
 export {
     uploadFile,
-    duplicateFile,
-    renameFile,
+    duplicateFileFolder,
+    renameFileFolder,
     deleteFile
 }

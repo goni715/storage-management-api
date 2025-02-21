@@ -4,18 +4,32 @@ import FileFolderModel from "../../models/FileFolderModel";
 
 const CreateFolderService = async (res:Response, loginUserId: string, name:string) => {
     try{
-        const newData = {
-            name,
-            filename: "",
-            path: "",
-            type:"folder",
-            size: 0,
-            user: loginUserId
-        };
+      //check name is already exists
+      const nameExists = await FileFolderModel.findOne({ name });
+      if (nameExists) {
+        return res.status(409).json({
+          success: false,
+          message: "This Folder is already exists",
+        });
+      }
 
-        const result = await FileFolderModel.create(newData);
-        res.status(201).json({ success: true, message: "Folder is created successfully", data: result });
+      const newData = {
+        name,
+        filename: "",
+        path: "",
+        type: "folder",
+        size: 0,
+        user: loginUserId,
+      };
 
+      const result = await FileFolderModel.create(newData);
+      res
+        .status(201)
+        .json({
+          success: true,
+          message: "Folder is created successfully",
+          data: result,
+        });
     }catch(err:any){
         res
         .status(500)

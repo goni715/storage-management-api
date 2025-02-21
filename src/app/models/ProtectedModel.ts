@@ -1,12 +1,15 @@
 import { model, Schema } from "mongoose";
-import { IFileFolder } from "../interfaces/fileFolder.interface";
 import { IProtected } from "../interfaces/protected.interface";
 import hashedPassword from "../utils/hashedPassword";
 
 const ProtectedSchema = new Schema<IProtected>({
   user: { type: Schema.Types.ObjectId, required:true, ref: "User"},
   password: {type: String, required: true}
-});
+},{
+  timestamps: true,
+  versionKey: false
+}
+);
 
 
 //Hash Password before saving

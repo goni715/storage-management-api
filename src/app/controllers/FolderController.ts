@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
-import path from "path";
-import fs from "fs-extra";
-import FileFolderModel from "../models/FileFolderModel";
 import CreateFolderService from "../services/folder/CreateFolderService";
+import GetRecentService from "../services/folder/GetRecentService";
+import DeleteFolderService from "../services/folder/DeleteFolderService";
 
 
 
@@ -14,23 +13,22 @@ const createFolder = async (req: Request, res:Response) => {
 };
 
 
-// Get all folders
-const getAllFolder = async (req:Request, res:Response) => {
-  try {
-    const folders = await FileFolderModel.find().populate("parent");
-    res.status(200).json({
-      success: true,
-      message: "Folders are retrieved successfully",
-      data: folders
-    });
-  } catch (error) {
-    res.status(500).json({ message: "Error retrieving folders", error });
-  }
+// Get recent file folders
+const getRecentFileFolder = async (req:Request, res:Response) => {
+  const loginUserId = req.headers.id;
+   await GetRecentService(res, loginUserId as string);
+};
+
+const deleteFolder = async (req: Request, res: Response) => {
+  const deleteId = req.params.folderId;
+  const loginUserId = req.headers.id;
+  await DeleteFolderService(res, deleteId, loginUserId as string);
 };
 
 
 
 export {
     createFolder,
-    getAllFolder
+    getRecentFileFolder,
+    deleteFolder
 }
