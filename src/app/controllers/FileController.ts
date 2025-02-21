@@ -56,10 +56,10 @@ const uploadFile = async (req:Request, res: Response) => {
 
 //common controller function for both file & folder
 //RenameFileFolderService is located at file directory inside the services folder
-const duplicateFileFolder = async (req:Request, res: Response) => {
+const duplicateFileOrFolder = async (req:Request, res: Response) => {
     const loginUserId = req.headers.id;
     const fileFolderId = req.params.fileFolderId;
-    await DuplicateFileFolderService(res, fileFolderId, loginUserId as string);
+    await DuplicateFileOrFolderService(res, fileFolderId, loginUserId as string);
 }
 
 //common controller function for both file & folder
