@@ -1,9 +1,8 @@
 import { Request, Response } from "express";
-import DuplicateFileService from "../services/file/DuplicateFileFolderService";
 import FileFolderModel from "../models/FileFolderModel";
-import RenameFileFolderService from "../services/file/RenameFileFolderService";
 import DeleteFileService from "../services/file/DeleteFileService";
-import DuplicateFileFolderService from "../services/file/DuplicateFileFolderService";
+import DuplicateFileOrFolderService from "../services/file/DuplicateFileOrFolderService";
+import RenameFileOrFolderService from "../services/file/RenameFileOrFolderService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -58,15 +57,15 @@ const uploadFile = async (req:Request, res: Response) => {
 //RenameFileFolderService is located at file directory inside the services folder
 const duplicateFileOrFolder = async (req:Request, res: Response) => {
     const loginUserId = req.headers.id;
-    const fileFolderId = req.params.fileFolderId;
-    await DuplicateFileOrFolderService(res, fileFolderId, loginUserId as string);
+    const fileOrFolderId = req.params.fileOrFolderId;
+    await DuplicateFileOrFolderService(res, fileOrFolderId, loginUserId as string);
 }
 
 //common controller function for both file & folder
 //RenameFileFolderService is located at file directory inside the services folder
-const renameFileFolder = async (req: Request, res: Response) => {
+const renameFileOrFolder = async (req: Request, res: Response) => {
     const loginUserId = req.headers.id;
-    await RenameFileFolderService(res, req.body, loginUserId as string);
+    await RenameFileOrFolderService(res, req.body, loginUserId as string);
 };
   
 const deleteFile = async (req: Request, res: Response) => {
@@ -78,7 +77,7 @@ const deleteFile = async (req: Request, res: Response) => {
 
 export {
     uploadFile,
-    duplicateFileFolder,
-    renameFileFolder,
+    duplicateFileOrFolder,
+    renameFileOrFolder,
     deleteFile
 }

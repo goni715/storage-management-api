@@ -1,10 +1,9 @@
 import { Response } from "express";
 import { Types } from "mongoose";
-import fs from "fs";
 import FileFolderModel from "../../models/FileFolderModel";
 import FavouriteModel from "../../models/FavouriteModel";
 
-const CreateFavouriteService = async (
+const CreateRemoveFavouriteService = async (
   res: Response,
   fileOrFolderId: string,
   loginUserId: string
@@ -29,21 +28,21 @@ const CreateFavouriteService = async (
       //check existingFavourite
       if (existingFavourite) {
         // If exists, delete it
-        await FavouriteModel.deleteOne({ _id: new ObjectId(existingFavourite._id) });
-        return { message: "Removed from favourites" };
+        const result =await FavouriteModel.deleteOne({ _id: new ObjectId(existingFavourite._id) });
+        res.status(200).json({
+          success: true,
+          message: "Favourite is removed successfully",
+          data: result,
+        });
       } else {
         // If not, create a new one
         const newFavourite = await FavouriteModel.create({ user: loginUserId, fileOrFolder: fileOrFolderId });
-        return newFavourite;
-      }
-
-    res.status(200).json({
-      success: true,
-      message: "File is deleted successfully",
-      data: "result",
-    });
-
-    
+        res.status(200).json({
+          success: true,
+          message: "Favourite is created successfully",
+          data: newFavourite,
+        });
+      } 
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -53,4 +52,4 @@ const CreateFavouriteService = async (
   }
 };
 
-export default CreateFavouriteService;
+export default CreateRemoveFavouriteService;

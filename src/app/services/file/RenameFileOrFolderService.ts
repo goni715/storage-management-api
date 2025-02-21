@@ -3,11 +3,11 @@ import { IRenameFile } from "../../interfaces/fileFolder.interface";
 import FileFolderModel from "../../models/FileFolderModel";
 import { Types } from "mongoose";
 
-const RenameFileFolderService = async (res: Response, payload: IRenameFile, loginUserId:string) => {
+const RenameFileOrFolderService = async (res: Response, payload: IRenameFile, loginUserId:string) => {
   try {
-    const { fileFolderId, name } = payload;
+    const { fileOrFolderId, name } = payload;
     const ObjectId = Types.ObjectId;
-    const data = await FileFolderModel.findOne({ user:loginUserId, _id: fileFolderId});
+    const data = await FileFolderModel.findOne({ user:loginUserId, _id: fileOrFolderId});
 
     if (!data) {
       return res.status(404).json({
@@ -19,7 +19,7 @@ const RenameFileFolderService = async (res: Response, payload: IRenameFile, logi
 
     //rename the file
     const result = await FileFolderModel.updateOne(
-      { _id: new ObjectId(fileFolderId) },
+      { _id: new ObjectId(fileOrFolderId) },
       { name }
     );
     res.status(200).json({
@@ -36,4 +36,4 @@ const RenameFileFolderService = async (res: Response, payload: IRenameFile, logi
   }
 };
 
-export default RenameFileFolderService;
+export default RenameFileOrFolderService;

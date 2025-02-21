@@ -1,6 +1,6 @@
 import express from 'express';
 import upload from '../helper/upload';
-import { deleteFile,  uploadFile } from '../controllers/FileController';
+import { deleteFile,  duplicateFileOrFolder,  renameFileOrFolder,  uploadFile } from '../controllers/FileController';
 import AuthMiddleware from '../middlewares/AuthMiddleware';
 
 const router = express.Router();

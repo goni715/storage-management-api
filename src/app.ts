@@ -1,4 +1,4 @@
-import express, {Express, Application, Request, Response } from "express";
+import express, {Express, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import bodyParser from "body-parser";
@@ -6,6 +6,10 @@ import cookieParser from "cookie-parser";
 import authRouter from './app/routes/AuthRoutes';
 import fileRouter from './app/routes/FileRoutes';
 import folderRouter from './app/routes/FolderRoutes';
+import favouriteRouter from './app/routes/FavouriteRoutes';
+import protectedRouter from './app/routes/ProtectedRoutes';
+
+
 
 import path from "path";
 
@@ -35,6 +39,8 @@ app.get("/", (req: Request, res: Response) => {
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/folder', folderRouter);
 app.use('/api/v1/file', fileRouter);
+app.use('/api/v1/favourite', favouriteRouter);
+app.use('/api/v1/protected', protectedRouter);
 
 
 //serve uploads folder

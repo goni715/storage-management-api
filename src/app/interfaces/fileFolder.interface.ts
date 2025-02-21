@@ -12,6 +12,6 @@ export interface IFileFolder{
 }
 
 export interface IRenameFile{
-    fileFolderId: string;
+    fileOrFolderId: string;
     name: string;
 }

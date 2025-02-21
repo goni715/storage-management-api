@@ -1,9 +1,9 @@
 import { Response } from "express";
 import FileFolderModel from "../../models/FileFolderModel";
 
-const DuplicateFileFolderService = async (res: Response, fileFolderId: string, loginUserId:string) => {
+const DuplicateFileOrFolderService = async (res: Response, fileOrFolderId: string, loginUserId:string) => {
   try {
-    const data = await FileFolderModel.findOne({ user:loginUserId, _id: fileFolderId});
+    const data = await FileFolderModel.findOne({ user:loginUserId, _id: fileOrFolderId});
     if (!data) {
       return res.status(404).json({
         success: false,
@@ -40,4 +40,4 @@ const DuplicateFileFolderService = async (res: Response, fileFolderId: string, l
   }
 };
 
-export default DuplicateFileFolderService;
+export default DuplicateFileOrFolderService;
