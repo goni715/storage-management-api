@@ -1,33 +1,23 @@
 import { Request, Response } from "express";
-import FolderModel from "../models/FolderModel";
 import path from "path";
 import fs from "fs-extra";
+import FileFolderModel from "../models/FileFolderModel";
+import CreateFolderService from "../services/folder/CreateFolderService";
 
 
 
 // Create a folder
 const createFolder = async (req: Request, res:Response) => {
-
-  try {
-    const { name, parent } = req.body;
-    const folderPath = path.join(__dirname, "../uploads", name);
-    
-    fs.ensureDirSync(folderPath); // Create directory
-
-    const newFolder = new FolderModel({ name, parent: parent || null });
-    await newFolder.save();
-
-    res.status(201).json({ message: "Folder created", folder: newFolder });
-  } catch (error) {
-    res.status(500).json({ message: "Error creating folder", error });
-  }
+  const loginUserId = req.headers.id;
+  const { name } = req.body;
+  await CreateFolderService(res, loginUserId as string, name);
 };
 
 
 // Get all folders
 const getAllFolder = async (req:Request, res:Response) => {
   try {
-    const folders = await FolderModel.find().populate("parent");
+    const folders = await FileFolderModel.find().populate("parent");
     res.status(200).json({
       success: true,
       message: "Folders are retrieved successfully",

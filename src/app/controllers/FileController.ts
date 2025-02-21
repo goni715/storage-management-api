@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
-import FileModel from "../models/FileModel";
 import DuplicateFileService from "../services/file/DuplicateFileService";
+import RenameFileService from "../services/file/RenameFileService";
+import DeleteService from "../services/common/DeleteService";
+import FileFolderModel from "../models/FileFolderModel";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -27,8 +29,9 @@ const uploadFile = async (req:Request, res: Response) => {
 
          
 
-            const file = new FileModel({
+            const file = new FileFolderModel({
                 name: req?.file.filename.split('.')[0],
+                filename: req?.file.filename,
                 path: path_url,
                 type,
                 size: req?.file.size,
@@ -59,8 +62,19 @@ const duplicateFile = async (req:Request, res: Response) => {
     await DuplicateFileService(res, fileId);
 }
 
+const renameFile = async (req: Request, res: Response) => {
+    await RenameFileService(res, req.body);
+};
+  
+const deleteFile = async (req: Request, res: Response) => {
+    const deleteId = req.params.fileId;
+    await DeleteService(res, deleteId, FileFolderModel);
+};
+  
 
 export {
     uploadFile,
-    duplicateFile
+    duplicateFile,
+    renameFile,
+    deleteFile
 }

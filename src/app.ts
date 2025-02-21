@@ -4,8 +4,9 @@ import morgan from "morgan";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import authRouter from './app/routes/AuthRoutes';
-import folderRouter from './app/routes/FolderRoutes';
 import fileRouter from './app/routes/FileRoutes';
+import folderRouter from './app/routes/FolderRoutes';
+
 import path from "path";
 
 
