@@ -1,10 +1,11 @@
 import express from 'express';
 import upload from '../helper/upload';
-import { uploadFile } from '../controllers/FileController';
+import { duplicateFile, uploadFile } from '../controllers/FileController';
 
 const router = express.Router();
 
 router.post('/upload-file', upload.single('file'), uploadFile);
+router.post('/duplicate-file/:fileId', duplicateFile);
 
 
 

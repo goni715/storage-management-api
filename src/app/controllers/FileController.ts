@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import FileModel from "../models/FileModel";
+import DuplicateFileService from "../services/file/DuplicateFileService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -9,7 +10,7 @@ const uploadFile = async (req:Request, res: Response) => {
 
          console.log(req.file);
 
-         const image_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+         const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
          let type: string='';
          if(req.file.mimetype.split('/')[0] === "image"){
             type="image"
@@ -27,8 +28,8 @@ const uploadFile = async (req:Request, res: Response) => {
          
 
             const file = new FileModel({
-                name: req?.file.filename,
-                path: image_url,
+                name: req?.file.filename.split('.')[0],
+                path: path_url,
                 type,
                 size: req?.file.size,
             });
@@ -36,14 +37,7 @@ const uploadFile = async (req:Request, res: Response) => {
             await file.save();
 
 
-            //"http://localhost:5000/uploads/1740068151907.jpeg"
-
-            
-
-        
-
-            res.status(201).json({success: true, message: 'File uploaded successfully', file: image_url });
-
+            res.status(201).json({success: true, message: 'File uploaded successfully', file: path_url });
             
         }else{
              res.status(404).json({
@@ -60,6 +54,13 @@ const uploadFile = async (req:Request, res: Response) => {
 }
 
 
+const duplicateFile = async (req:Request, res: Response) => {
+    const fileId = req.params.fileId;
+    await DuplicateFileService(res, fileId);
+}
+
+
 export {
-    uploadFile
+    uploadFile,
+    duplicateFile
 }

@@ -24,6 +24,23 @@ const createFolder = async (req: Request, res:Response) => {
 };
 
 
+// Get all folders
+const getAllFolder = async (req:Request, res:Response) => {
+  try {
+    const folders = await FolderModel.find().populate("parent");
+    res.status(200).json({
+      success: true,
+      message: "Folders are retrieved successfully",
+      data: folders
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Error retrieving folders", error });
+  }
+};
+
+
+
 export {
-    createFolder
+    createFolder,
+    getAllFolder
 }

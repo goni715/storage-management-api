@@ -1,10 +1,10 @@
 import express from 'express';
-import { createFolder } from '../controllers/FolderController';
+import { createFolder, getAllFolder } from '../controllers/FolderController';
 
 const router = express.Router();
 
 router.post('/create-folder', createFolder);
-
+router.get('/get-all-folder', getAllFolder);
 
 
 

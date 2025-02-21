@@ -4,7 +4,7 @@ import { IFolder } from "../interfaces/folder.interface";
 
 const FolderSchema = new Schema<IFolder>({
   name: { type: String, required: true },
-  parent: { type: Schema.Types.ObjectId, ref: "Folder", default: null }, // Nested folders
+  //user: { type: Schema.Types.ObjectId, ref: "User"}, 
 },
 {
   timestamps: true,

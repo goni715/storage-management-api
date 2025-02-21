@@ -1,3 +1,4 @@
+import { Types } from "mongoose";
 
 
 export interface IFile{
@@ -5,5 +6,5 @@ export interface IFile{
     path: string;
     type: string;
     size: number;
-    folder?: string | null;
+    //user: Types.ObjectId;
 }

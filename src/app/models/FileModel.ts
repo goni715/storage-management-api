@@ -6,7 +6,7 @@ const fileSchema = new Schema<IFile>({
   path: { type: String, required: true },
   type: { type: String, required: true },
   size: { type: Number, required: true },
-  folder: { type: Schema.Types.ObjectId, ref: "Folder", default: null }, // Parent folder
+  //user: { type: Schema.Types.ObjectId, required:true, ref: "users"}, 
 });
 
 export default model<IFile>("File", fileSchema);
