@@ -4,6 +4,7 @@ import UserLoginService from "../services/user/UserLoginService";
 import ForgotPasswordVerifyEmailService from "../services/ForgotPassword/ForgotPasswordVerifyEmailService";
 import ForgotPasswordVerifyOtpService from "../services/ForgotPassword/ForgotPasswordVerifyOtpService";
 import CreateNewPasswordService from "../services/ForgotPassword/CreateNewPasswordService";
+import ChangePasswordService from "../services/user/ChangePasswordService";
 
 
 const register = async (req: Request, res: Response) => {
@@ -32,10 +33,18 @@ const createNewPassword = async (req: Request, res: Response) => {
 };
 
 
+
+const changePassword = async (req: Request, res: Response) => {
+  const loginUserId = req.headers.id;
+  await ChangePasswordService(res, loginUserId as string, req.body);
+};
+
+
 export {
     register,
     login,
     forgotPasswordVerifyEmail,
     forgotPasswordVerifyOtp,
-    createNewPassword
+    createNewPassword,
+    changePassword
 }

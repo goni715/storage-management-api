@@ -10,7 +10,7 @@ const GetStorageSummaryService = async (res: Response, loginUserId: string) => {
     //1 MB = 1024 KB
     //1 MB = 1024 × 1024 = 1048576 bytes
 
-    //totalStorage = 1048576 * 100; //104857600 bytes
+    //100MB = 100 * 1048576; //104857600 bytes
     const totalStorage = 100; // 100 MB
 
     const matchQuery = { user: new ObjectId(loginUserId) };

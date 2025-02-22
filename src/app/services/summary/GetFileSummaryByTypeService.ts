@@ -20,6 +20,7 @@ const GetFileAndFolderSummaryService = async (res: Response, type: string, login
       }
     ]);
 
+
     res.status(200).json({
       success: true,
       message: "Count and total size calculated successfully",
