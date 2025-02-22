@@ -4,6 +4,8 @@ import DeleteFileService from "../services/file/DeleteFileService";
 import DuplicateFileOrFolderService from "../services/file/DuplicateFileOrFolderService";
 import RenameFileOrFolderService from "../services/file/RenameFileOrFolderService";
 import FilterFileOrFolderService from "../services/file/FilterFileOrFolderService";
+import GetFileAndFolderSummaryService from "../services/summary/GetFileSummaryByTypeService";
+import GetStorageSummaryService from "../services/summary/GetStorageSummaryService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -84,10 +86,25 @@ const filterFileOrFolder = async (req: Request, res: Response) => {
     await FilterFileOrFolderService(res, type, loginUserId as string);
 };
 
+//common controller function for both file & folder
+const getFileAndFolderSummary = async (req: Request, res: Response) => {
+    const type = req.params.type;
+    const loginUserId = req.headers.id;
+    await GetFileAndFolderSummaryService(res, type, loginUserId as string);
+};
+
+//getstorage summary
+const getStorageSummary = async (req: Request, res: Response) => {
+    const loginUserId = req.headers.id;
+    await GetStorageSummaryService(res, loginUserId as string);
+};
+
 export {
     uploadFile,
     duplicateFileOrFolder,
     renameFileOrFolder,
     deleteFile,
-    filterFileOrFolder
+    filterFileOrFolder,
+    getFileAndFolderSummary,
+    getStorageSummary
 }
