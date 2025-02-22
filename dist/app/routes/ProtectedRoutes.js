@@ -11,7 +11,7 @@ const router = express_1.default.Router();
 router.post("/create-protected-account", AuthMiddleware_1.default, ProtectedController_1.createProtectedAccount);
 router.post("/login-protected-account", AuthMiddleware_1.default, ProtectedController_1.loginProtectedAccount);
 router.put("/protect-file-or-folder/:fileOrFolderId", AuthMiddleware_1.default, ProtectedController_1.protectFileOrFolder);
-router.put("/unprotect-file-or-folder/:fileOrFolderId", AuthMiddleware_1.default, ProtectedController_1.unprotectFileOrFolder);
+router.put("/unprotect-file-or-folder/:fileOrFolderId", AuthMiddleware_1.default, ProtectedMiddleware_1.default, ProtectedController_1.unprotectFileOrFolder);
 router.get('/get-protected-file-or-folder', AuthMiddleware_1.default, ProtectedMiddleware_1.default, ProtectedController_1.getProtectedFileOrFolder);
 router.put('/change-protected-account-password', AuthMiddleware_1.default, ProtectedController_1.changeProtecteAccountPassword);
 exports.default = router;

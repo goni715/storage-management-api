@@ -17,6 +17,16 @@ const mongoose_1 = require("mongoose");
 const UnprotectFileOrFolderService = (res, fileOrFolderId, loginUserId) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const ObjectId = mongoose_1.Types.ObjectId;
+        const data = yield FileFolderModel_1.default.findOne({
+            user: loginUserId,
+            _id: fileOrFolderId,
+        });
+        if (!data) {
+            return res.status(404).json({
+                success: false,
+                message: `This File or Folder doesn't exist`,
+            });
+        }
         const UpdateQuery = { _id: new ObjectId(fileOrFolderId), user: new ObjectId(loginUserId) };
         const result = yield FileFolderModel_1.default.updateOne(UpdateQuery, {
             protected: false

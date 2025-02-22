@@ -1,6 +1,5 @@
-// Setup storage for files
 import multer from "multer";
-import path from "path";
+
 
 const storage = multer.diskStorage({
   //comment-out for vercel server
@@ -9,18 +8,23 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
 
-    let type: string='';
+   console.log(file.mimetype);
+   console.log(file);
+
+   let type: string='';
     if(file.mimetype.split('/')[0] === "image"){
        type="image"
     }
 
-    if(file.mimetype.split('/')[0] !== "image" && file.originalname.split('.')[1] === "pdf"){
+    if(file.originalname.split('.')[1] === "pdf"){
        type="pdf"
     }
 
     if(file.mimetype.split('/')[0] !== "image" && file.originalname.split('.')[1] !== "pdf"){
        type="note"
     }
+
+    
 
     const randomNumber = Math.floor(100000 + Math.random() * 900000);
     const uniqueSuffix = type+"_"+randomNumber + ".";

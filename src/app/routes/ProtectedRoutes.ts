@@ -26,6 +26,7 @@ router.put(
 router.put(
   "/unprotect-file-or-folder/:fileOrFolderId",
   AuthMiddleware,
+  ProtectedMiddleware,
   unprotectFileOrFolder
 );
 

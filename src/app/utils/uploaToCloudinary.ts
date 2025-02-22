@@ -12,7 +12,7 @@ const uploaToCloudinary = async (path: string) => {
       )
 
      
-      fs.unlinkSync(path);
+      //fs.unlinkSync(path);
       
 
    return uploadResult;

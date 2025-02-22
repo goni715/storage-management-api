@@ -14,6 +14,7 @@ const uploadFile = async (req:Request, res: Response) => {
 
     try {
         if(req.file){
+            
 
          const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
 
@@ -22,7 +23,7 @@ const uploadFile = async (req:Request, res: Response) => {
             type="image"
          }
 
-         if(req.file.mimetype.split('/')[0] !== "image" && req.file.originalname.split('.')[1] === "pdf"){
+         if(req.file.originalname.split('.')[1] === "pdf"){
             type="pdf"
          }
 
@@ -32,7 +33,8 @@ const uploadFile = async (req:Request, res: Response) => {
          
      
             //file upload to cloudinary
-            const cloudinaryRes = await uploaToCloudinary(req.file?.path);
+          // const cloudinaryRes = await uploaToCloudinary(req.file?.path);
+          // console.log(cloudinaryRes);
 
             //insert to database
             const newFile = {

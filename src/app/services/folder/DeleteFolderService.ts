@@ -8,12 +8,16 @@ const DeleteFolderService = async (
   deleteId: string,
   loginUserId: string
 ) => {
-
-
   const ObjectId = Types.ObjectId;
-  const DeleteQuery = {user: new ObjectId(loginUserId), _id: new ObjectId(deleteId) };
+  const DeleteQuery = {
+    user: new ObjectId(loginUserId),
+    _id: new ObjectId(deleteId),
+  };
 
-  const folder = await FileFolderModel.findOne({ user:loginUserId, _id: deleteId});
+  const folder = await FileFolderModel.findOne({
+    user: loginUserId,
+    _id: deleteId,
+  });
   if (!folder) {
     return res.status(404).json({
       success: false,
@@ -21,21 +25,20 @@ const DeleteFolderService = async (
     });
   }
 
- //using transaction roll-back
+  //using transaction roll-back
   const session = await startSession();
 
   try {
     session.startTransaction();
 
     //delete the folder
-    const result = await FileFolderModel.deleteOne(DeleteQuery, {session});
+    const result = await FileFolderModel.deleteOne(DeleteQuery, { session });
 
     //delete folder from favourite list
     await FavouriteModel.deleteOne(
-      {user: new ObjectId(loginUserId), fileOrFolder: new ObjectId(deleteId) },
-      {session}
+      { user: new ObjectId(loginUserId), fileOrFolder: new ObjectId(deleteId) },
+      { session }
     );
-
 
     //transaction success
     await session.commitTransaction();
@@ -46,11 +49,10 @@ const DeleteFolderService = async (
       message: "Folder is deleted successfully",
       data: result,
     });
-
   } catch (err: any) {
     await session.abortTransaction();
     await session.endSession();
-    
+
     res.status(500).json({
       success: false,
       message: "Something Went Wrong",

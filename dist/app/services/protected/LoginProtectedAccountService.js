@@ -43,7 +43,7 @@ const LoginProtectedAccountService = (res, password, loginUserId) => __awaiter(v
         const protectedToken = (0, createProtectedToken_1.default)(tokenPayload, config_1.default.jwt_protected_secret, config_1.default.jwt_protected_expires_in);
         res.status(200).json({
             success: true,
-            message: "User is Login successfully",
+            message: "Protected Login successfully",
             data: {
                 protectedToken,
             },

@@ -12,7 +12,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs_1 = __importDefault(require("fs"));
 const cloudinary_1 = __importDefault(require("../helper/cloudinary"));
 const uploaToCloudinary = (path) => __awaiter(void 0, void 0, void 0, function* () {
     // Upload
@@ -20,7 +19,7 @@ const uploaToCloudinary = (path) => __awaiter(void 0, void 0, void 0, function* 
         .upload(path, {
         folder: "storage-management"
     });
-    fs_1.default.unlinkSync(path);
+    //fs.unlinkSync(path);
     return uploadResult;
 });
 exports.default = uploaToCloudinary;

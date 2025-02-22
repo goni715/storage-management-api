@@ -46,7 +46,7 @@ const LoginProtectedAccountService = async (res:Response, password: string, logi
 
   res.status(200).json({
     success: true,
-    message: "User is Login successfully",
+    message: "Protected Login successfully",
     data: {
       protectedToken,
     },

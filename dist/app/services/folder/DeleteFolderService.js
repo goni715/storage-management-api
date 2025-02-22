@@ -17,8 +17,14 @@ const FileFolderModel_1 = __importDefault(require("../../models/FileFolderModel"
 const FavouriteModel_1 = __importDefault(require("../../models/FavouriteModel"));
 const DeleteFolderService = (res, deleteId, loginUserId) => __awaiter(void 0, void 0, void 0, function* () {
     const ObjectId = mongoose_1.Types.ObjectId;
-    const DeleteQuery = { user: new ObjectId(loginUserId), _id: new ObjectId(deleteId) };
-    const folder = yield FileFolderModel_1.default.findOne({ user: loginUserId, _id: deleteId });
+    const DeleteQuery = {
+        user: new ObjectId(loginUserId),
+        _id: new ObjectId(deleteId),
+    };
+    const folder = yield FileFolderModel_1.default.findOne({
+        user: loginUserId,
+        _id: deleteId,
+    });
     if (!folder) {
         return res.status(404).json({
             success: false,
