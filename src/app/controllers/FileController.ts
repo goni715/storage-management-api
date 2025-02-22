@@ -6,6 +6,7 @@ import RenameFileOrFolderService from "../services/file/RenameFileOrFolderServic
 import FilterFileOrFolderService from "../services/file/FilterFileOrFolderService";
 import GetFileAndFolderSummaryService from "../services/summary/GetFileSummaryByTypeService";
 import GetStorageSummaryService from "../services/summary/GetStorageSummaryService";
+import uploadImageToCloudinary from "../utils/uploadImageToCloudinary";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -13,8 +14,6 @@ const uploadFile = async (req:Request, res: Response) => {
 
     try {
         if(req.file){
-
-         console.log(req.file);
 
          const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
          let type: string='';
@@ -41,8 +40,9 @@ const uploadFile = async (req:Request, res: Response) => {
                 user: loginUserId
             };
      
-             const result = await FileFolderModel.create(newFile)
-            res.status(201).json({success: true, message: 'File uploaded successfully', data: result });
+            const result = await FileFolderModel.create(newFile);
+            const cloudinaryRes = await uploadImageToCloudinary(req.file?.path);
+            res.status(201).json({success: true, message: 'File uploaded successfully', data: result, cloudinaryRes });
             
         }else{
              res.status(404).json({
