@@ -5,8 +5,9 @@
   "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "start": "nodemon src/server.ts",
+    "dev-0": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "nodemon dist/server.js",
+    "dev": "nodemon src/server.ts",
     "build": "tsc --w"
   },
   "keywords": [],
@@ -15,6 +16,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
+    "cloudinary": "^2.5.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",

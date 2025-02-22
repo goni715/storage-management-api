@@ -4,6 +4,7 @@ import ProtectFileOrFolderService from "../services/protected/ProtectFileOrFolde
 import UnprotectFileOrFolderService from "../services/protected/UnprotectFileOrFolderService";
 import LoginProtectedAccountService from "../services/protected/LoginProtectedAccountService";
 import GetProtectFileOrFolderService from "../services/protected/GetProtectedFileOrFolder";
+import ChangeProtectedAccountPassService from "../services/protected/ChangeProtectedAccountPassService";
 
 const createProtectedAccount = async (req: Request, res: Response) => {
   const loginUserId = req.headers.id;
@@ -14,11 +15,7 @@ const createProtectedAccount = async (req: Request, res: Response) => {
 const loginProtectedAccount = async (req: Request, res: Response) => {
   const { password } = req.body;
   const loginUserId = req.headers.id;
-  await LoginProtectedAccountService(
-    res,
-    password,
-    loginUserId as string
-  );
+  await LoginProtectedAccountService(res, password, loginUserId as string);
 };
 
 const protectFileOrFolder = async (req: Request, res: Response) => {
@@ -37,13 +34,21 @@ const unprotectFileOrFolder = async (req: Request, res: Response) => {
   );
 };
 
-
 const getProtectedFileOrFolder = async (req: Request, res: Response) => {
   const loginUserId = req.headers.id;
-  await GetProtectFileOrFolderService(
-    res,
-    loginUserId as string
-  );
+  await GetProtectFileOrFolderService(res, loginUserId as string);
 };
 
-export { createProtectedAccount, loginProtectedAccount, protectFileOrFolder, unprotectFileOrFolder, getProtectedFileOrFolder };
+const changeProtecteAccountPassword = async (req: Request, res: Response) => {
+  const loginUserId = req.headers.id;
+  await ChangeProtectedAccountPassService(res, loginUserId as string, req.body);
+};
+
+export {
+  createProtectedAccount,
+  loginProtectedAccount,
+  protectFileOrFolder,
+  unprotectFileOrFolder,
+  getProtectedFileOrFolder,
+  changeProtecteAccountPassword,
+};

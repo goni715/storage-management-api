@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import CreateRemoveFavouriteService from "../services/favourite/CreateFavouriteService";
+import CreateRemoveFavouriteService from "../services/favourite/CreateRemoveFavouriteService";
+import GetFavouriteFileOrFolderService from "../services/favourite/GetFavouriteFileOrFolderService";
 
 
 const createRemoveFavourite = async (req: Request, res: Response) => {
@@ -8,8 +9,14 @@ const createRemoveFavourite = async (req: Request, res: Response) => {
     await CreateRemoveFavouriteService(res, fileOrFolderId, loginUserId as string);
 };
 
+const getFavouriteFileOrFolder = async (req: Request, res: Response) => {
+    const loginUserId = req.headers.id;
+    await GetFavouriteFileOrFolderService(res, loginUserId as string);
+};
+
 
 
 export {
-    createRemoveFavourite
+    createRemoveFavourite,
+    getFavouriteFileOrFolder
 }

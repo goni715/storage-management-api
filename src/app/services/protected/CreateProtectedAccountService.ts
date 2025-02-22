@@ -8,7 +8,7 @@ const CreateProtectedAccountService = async (res:Response, password: string, log
       if (protectedAccountExists) {
         return res.status(409).json({
           success: false,
-          message: "Email is already exists",
+          message: "Protected Account is already exists",
         });
       }
 

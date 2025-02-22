@@ -10,7 +10,7 @@ router.post('/forgot-password-verify-email', forgotPasswordVerifyEmail);
 router.post('/forgot-password-verify-otp', forgotPasswordVerifyOtp);
 router.post("/create-new-password",createNewPassword);
 
-router.post("/change-password", AuthMiddleware, changePassword);
+router.put("/change-password", AuthMiddleware, changePassword);
 
 
 export default router;

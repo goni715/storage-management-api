@@ -1,6 +1,7 @@
 import express from "express";
 import AuthMiddleware from "../middlewares/AuthMiddleware";
 import {
+  changeProtecteAccountPassword,
   createProtectedAccount,
   getProtectedFileOrFolder,
   loginProtectedAccount,
@@ -29,6 +30,7 @@ router.put(
 );
 
 router.get('/get-protected-file-or-folder', AuthMiddleware, ProtectedMiddleware, getProtectedFileOrFolder);
+router.put('/change-protected-account-password', AuthMiddleware, changeProtecteAccountPassword);
 
 
 export default router;
