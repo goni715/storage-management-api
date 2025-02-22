@@ -16,4 +16,5 @@ router.get('/filter-file-or-folder/:type', AuthMiddleware_1.default, FileControl
 router.delete('/delete-file/:fileId', AuthMiddleware_1.default, FileController_1.deleteFile);
 router.get('/get-file-and-folder-summary', AuthMiddleware_1.default, FileController_1.getFileAndFolderSummary);
 router.get('/get-storage-summary', AuthMiddleware_1.default, FileController_1.getStorageSummary);
+router.get('/filter-by-date/:date', AuthMiddleware_1.default, FileController_1.filterFByDate);
 exports.default = router;

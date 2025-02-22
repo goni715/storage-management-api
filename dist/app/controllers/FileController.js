@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getStorageSummary = exports.getFileAndFolderSummary = exports.filterFileOrFolder = exports.deleteFile = exports.renameFileOrFolder = exports.duplicateFileOrFolder = exports.uploadFile = void 0;
+exports.filterFByDate = exports.getStorageSummary = exports.getFileAndFolderSummary = exports.filterFileOrFolder = exports.deleteFile = exports.renameFileOrFolder = exports.duplicateFileOrFolder = exports.uploadFile = void 0;
 const FileFolderModel_1 = __importDefault(require("../models/FileFolderModel"));
 const DeleteFileService_1 = __importDefault(require("../services/file/DeleteFileService"));
 const DuplicateFileOrFolderService_1 = __importDefault(require("../services/file/DuplicateFileOrFolderService"));
@@ -21,6 +21,7 @@ const FilterFileOrFolderService_1 = __importDefault(require("../services/file/Fi
 const GetFileAndFolderSummaryService_1 = __importDefault(require("../services/summary/GetFileAndFolderSummaryService"));
 const GetStorageSummaryService_1 = __importDefault(require("../services/summary/GetStorageSummaryService"));
 const uploaToCloudinary_1 = __importDefault(require("../utils/uploaToCloudinary"));
+const FilterByDateService_1 = __importDefault(require("../services/file/FilterByDateService"));
 const uploadFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const loginUserId = req.headers.id;
@@ -106,3 +107,9 @@ const getStorageSummary = (req, res) => __awaiter(void 0, void 0, void 0, functi
     yield (0, GetStorageSummaryService_1.default)(res, loginUserId);
 });
 exports.getStorageSummary = getStorageSummary;
+const filterFByDate = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const date = req.params.date;
+    const loginUserId = req.headers.id;
+    yield (0, FilterByDateService_1.default)(res, loginUserId, date);
+});
+exports.filterFByDate = filterFByDate;

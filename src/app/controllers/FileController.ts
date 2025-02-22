@@ -7,6 +7,7 @@ import FilterFileOrFolderService from "../services/file/FilterFileOrFolderServic
 import GetFileAndFolderSummaryService from "../services/summary/GetFileAndFolderSummaryService";
 import GetStorageSummaryService from "../services/summary/GetStorageSummaryService";
 import uploaToCloudinary from "../utils/uploaToCloudinary";
+import FilterByDateService from "../services/file/FilterByDateService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -104,6 +105,14 @@ const getStorageSummary = async (req: Request, res: Response) => {
     await GetStorageSummaryService(res, loginUserId as string);
 };
 
+const filterFByDate = async (req: Request, res: Response) => {
+    const date = req.params.date;
+    const loginUserId = req.headers.id;
+    await FilterByDateService(res, loginUserId as string, date);
+};
+
+
+
 export {
     uploadFile,
     duplicateFileOrFolder,
@@ -111,5 +120,6 @@ export {
     deleteFile,
     filterFileOrFolder,
     getFileAndFolderSummary,
-    getStorageSummary
+    getStorageSummary,
+    filterFByDate
 }

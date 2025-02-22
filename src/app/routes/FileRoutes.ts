@@ -1,6 +1,6 @@
 import express from 'express';
 import upload from '../helper/upload';
-import { deleteFile,  duplicateFileOrFolder,  filterFileOrFolder, getFileAndFolderSummary, getStorageSummary, renameFileOrFolder, uploadFile } from '../controllers/FileController';
+import { deleteFile,  duplicateFileOrFolder,  filterFByDate,  filterFileOrFolder, getFileAndFolderSummary, getStorageSummary, renameFileOrFolder, uploadFile } from '../controllers/FileController';
 import AuthMiddleware from '../middlewares/AuthMiddleware';
 
 const router = express.Router();
@@ -15,6 +15,7 @@ router.get('/filter-file-or-folder/:type', AuthMiddleware, filterFileOrFolder);
 router.delete('/delete-file/:fileId', AuthMiddleware, deleteFile);
 router.get('/get-file-and-folder-summary', AuthMiddleware, getFileAndFolderSummary);
 router.get('/get-storage-summary', AuthMiddleware, getStorageSummary);
+router.get('/filter-by-date/:date', AuthMiddleware, filterFByDate);
 
 
 
