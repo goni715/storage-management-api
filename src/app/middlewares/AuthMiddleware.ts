@@ -6,6 +6,7 @@ import UserModel from "../models/UserModel";
 
 const AuthMiddleware = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
   const token = req.headers.token;
+  
   if (!token) {
     return res.status(401).json({
       success: false,

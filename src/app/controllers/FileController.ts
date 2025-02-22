@@ -3,6 +3,7 @@ import FileFolderModel from "../models/FileFolderModel";
 import DeleteFileService from "../services/file/DeleteFileService";
 import DuplicateFileOrFolderService from "../services/file/DuplicateFileOrFolderService";
 import RenameFileOrFolderService from "../services/file/RenameFileOrFolderService";
+import FilterFileOrFolderService from "../services/file/FilterFileOrFolderService";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -75,9 +76,18 @@ const deleteFile = async (req: Request, res: Response) => {
 };
   
 
+//common controller function for both file & folder
+//FilterFileFolderService is located at file directory inside the services folder
+const filterFileOrFolder = async (req: Request, res: Response) => {
+    const type = req.params.type;
+    const loginUserId = req.headers.id;
+    await FilterFileOrFolderService(res, type, loginUserId as string);
+};
+
 export {
     uploadFile,
     duplicateFileOrFolder,
     renameFileOrFolder,
-    deleteFile
+    deleteFile,
+    filterFileOrFolder
 }

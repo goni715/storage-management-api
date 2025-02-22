@@ -2,10 +2,12 @@ import express from "express";
 import AuthMiddleware from "../middlewares/AuthMiddleware";
 import {
   createProtectedAccount,
+  getProtectedFileOrFolder,
   loginProtectedAccount,
   protectFileOrFolder,
   unprotectFileOrFolder,
 } from "../controllers/ProtectedController";
+import ProtectedMiddleware from "../middlewares/ProtectedMiddleware";
 
 const router = express.Router();
 
@@ -25,5 +27,8 @@ router.put(
   AuthMiddleware,
   unprotectFileOrFolder
 );
+
+router.get('/get-protected-file-or-folder', AuthMiddleware, ProtectedMiddleware, getProtectedFileOrFolder);
+
 
 export default router;

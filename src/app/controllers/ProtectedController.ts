@@ -3,6 +3,7 @@ import CreateProtectedAccountService from "../services/protected/CreateProtected
 import ProtectFileOrFolderService from "../services/protected/ProtectFileOrFolderService";
 import UnprotectFileOrFolderService from "../services/protected/UnprotectFileOrFolderService";
 import LoginProtectedAccountService from "../services/protected/LoginProtectedAccountService";
+import GetProtectFileOrFolderService from "../services/protected/GetProtectedFileOrFolder";
 
 const createProtectedAccount = async (req: Request, res: Response) => {
   const loginUserId = req.headers.id;
@@ -36,4 +37,13 @@ const unprotectFileOrFolder = async (req: Request, res: Response) => {
   );
 };
 
-export { createProtectedAccount, loginProtectedAccount, protectFileOrFolder, unprotectFileOrFolder };
+
+const getProtectedFileOrFolder = async (req: Request, res: Response) => {
+  const loginUserId = req.headers.id;
+  await GetProtectFileOrFolderService(
+    res,
+    loginUserId as string
+  );
+};
+
+export { createProtectedAccount, loginProtectedAccount, protectFileOrFolder, unprotectFileOrFolder, getProtectedFileOrFolder };

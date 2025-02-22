@@ -1,0 +1,846 @@
+# Impact of Social Media on Society
+
+## Abstract
+
+The proliferation of social media has significantly transformed societal norms, behaviors, and interactions. This research aims to explore the multifaceted impact of social media on various aspects of society, including communication patterns, mental health, political engagement, and cultural dynamics. By employing both qualitative and quantitative methodologies, this study seeks to provide a comprehensive understanding of social media's role in shaping modern society.
+
+## Table of Contents
+
+1. Introduction
+2. Literature Review
+3. Research Objectives
+4. Methodology
+5. Data Analysis and Results
+6. Discussion
+7. Conclusion
+8. Recommendations
+9. References
+10. Appendices (Including Questionnaires)
+
+---
+
+## Chapter 1: Introduction
+
+### 1.1 Background
+Social media platforms have become an integral part of daily life, influencing how individuals interact, share information, and form opinions. Understanding the societal implications of these changes is crucial in the digital age.
+
+### 1.2 Problem Statement
+While social media offers numerous benefits, such as connectivity and access to information, it also presents challenges like misinformation, cyberbullying, and addiction. This study investigates these dualities to provide a balanced perspective.
+
+### 1.3 Research Questions
+1. How does social media influence interpersonal communication?
+2. What are the psychological impacts of social media usage?
+3. How does social media shape political and social activism?
+4. In what ways does social media affect cultural identity and values?
+
+### 1.4 Scope and Limitations
+This research focuses on users aged 18-45 across various demographics. Limitations include geographical constraints and the dynamic nature of social media trends.
+
+
+
+
+**Research Questionnaire: Impact of Social Media on Society**
+
+**Section 1: Demographic Information**
+1. What is your age? (Quantitative)
+   - Under 18
+   - 18-24
+   - 25-34
+   - 35-44
+   - 45+
+
+2. What is your gender? (Quantitative)
+   - Male
+   - Female
+   - Non-binary/Other
+   - Prefer not to say
+
+3. What is your highest level of education? (Quantitative)
+   - Less than high school
+   - High school diploma
+   - Bachelor’s degree
+   - Master’s degree
+   - Doctorate
+   - Other
+
+4. How often do you use social media? (Quantitative)
+   - Rarely
+   - A few times a week
+   - Once a day
+   - Multiple times a day
+
+**Section 2: General Usage of Social Media**
+5. Which social media platforms do you use most frequently? (Quantitative)
+   - Facebook
+   - Instagram
+   - Twitter/X
+   - TikTok
+   - LinkedIn
+   - Other
+
+6. How many hours do you spend on social media daily? (Quantitative)
+   - Less than 1 hour
+   - 1-2 hours
+   - 3-4 hours
+   - More than 4 hours
+
+7. Do you primarily use social media for personal or professional purposes? (Quantitative)
+   - Personal
+   - Professional
+   - Both equally
+
+**Section 3: Social Media’s Influence on Society**
+8. Do you believe social media has a positive or negative impact on society? (Quantitative)
+   - Mostly positive
+   - Somewhat positive
+   - Neutral
+   - Somewhat negative
+   - Mostly negative
+
+9. How often do you encounter misinformation or fake news on social media? (Quantitative)
+   - Rarely
+   - Occasionally
+   - Frequently
+   - Very often
+
+10. Has social media influenced your opinions on social issues? (Quantitative)
+    - Yes, significantly
+    - Yes, somewhat
+    - Neutral
+    - No, not much
+    - No, not at all
+
+11. How often do you engage in discussions about current events on social media? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+**Section 4: Personal Impact of Social Media**
+12. How would you rate the impact of social media on your mental health? (Quantitative)
+    - Very positive
+    - Somewhat positive
+    - Neutral
+    - Somewhat negative
+    - Very negative
+
+13. Do you feel social media affects your productivity? (Quantitative)
+    - Yes, significantly
+    - Yes, somewhat
+    - Neutral
+    - No, not much
+    - No, not at all
+
+14. How often do you feel pressured to portray a certain image on social media? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+15. Have you ever taken a break from social media to improve your well-being? (Quantitative)
+    - Yes
+    - No
+
+16. How would you describe the impact of social media on your relationships? (Quantitative)
+    - Very positive
+    - Somewhat positive
+    - Neutral
+    - Somewhat negative
+    - Very negative
+
+**Section 5: Social Media Content and Interactions**
+17. How often do you create and share original content on social media? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+18. How often do you interact with posts by others (likes, comments, shares)? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+19. Do you feel that social media provides a platform for marginalized voices? (Quantitative)
+    - Strongly agree
+    - Agree
+    - Neutral
+    - Disagree
+    - Strongly disagree
+
+20. How often do you experience cyberbullying or harassment on social media? (Quantitative)
+    - Never
+    - Rarely
+    - Occasionally
+    - Frequently
+
+**Section 6: Perceptions of Privacy and Data Usage**
+21. Are you concerned about your privacy on social media? (Quantitative)
+    - Yes, very concerned
+    - Somewhat concerned
+    - Neutral
+    - Not very concerned
+    - Not concerned at all
+
+22. How often do you review and adjust your privacy settings on social media? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+23. Do you feel confident that your data is secure on social media platforms? (Quantitative)
+    - Strongly agree
+    - Agree
+    - Neutral
+    - Disagree
+    - Strongly disagree
+
+**Section 7: Broader Impacts of Social Media**
+24. Do you think social media has increased awareness of global issues? (Quantitative)
+    - Strongly agree
+    - Agree
+    - Neutral
+    - Disagree
+    - Strongly disagree
+
+25. How often do you participate in social media campaigns (e.g., hashtags, petitions)? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+26. Do you think social media has changed how people interact in real life? (Quantitative)
+    - Yes, significantly
+    - Yes, somewhat
+    - Neutral
+    - No, not much
+    - No, not at all
+
+27. How often do you encounter advertisements or sponsored content on social media? (Quantitative)
+    - Rarely
+    - Occasionally
+    - Frequently
+    - Very often
+
+28. Do you feel social media has democratized access to information? (Quantitative)
+    - Strongly agree
+    - Agree
+    - Neutral
+    - Disagree
+    - Strongly disagree
+
+**Section 8: Qualitative Questions**
+29. In your opinion, what is the most significant positive impact of social media on society? (Qualitative)
+
+30. In your opinion, what is the most significant negative impact of social media on society? (Qualitative)
+
+i
+
+---
+
+## Chapter 2: Literature Review
+
+### 2.1 Communication and Social Media
+Exploration of studies analyzing changes in communication patterns due to social media.
+
+### 2.2 Mental Health Implications
+Review of research linking social media usage to anxiety, depression, and self-esteem.
+
+### 2.3 Political Engagement and Activism
+Discussion of social media’s role in mobilizing movements and influencing political discourse.
+
+### 2.4 Cultural Impact
+Analysis of how social media affects cultural exchange, identity, and homogenization.
+
+---
+
+## Chapter 3: Research Objectives
+
+1. To identify the key effects of social media on interpersonal communication.
+2. To evaluate the psychological outcomes associated with prolonged social media use.
+3. To analyze social media’s role in fostering political and social change.
+4. To investigate the cultural shifts influenced by social media platforms.
+
+---
+
+## Chapter 4: Methodology
+
+### 4.1 Research Design
+A mixed-methods approach combining surveys, interviews, and case studies.
+
+### 4.2 Sampling
+Description of the sample population, including age, gender, and regional diversity.
+
+### 4.3 Data Collection
+- Surveys distributed online to gather quantitative data.
+- Interviews with experts and social media users for qualitative insights.
+- Case studies of specific social media campaigns.
+
+### 4.4 Instruments
+Appendices will include the questionnaires and interview guides.
+
+---
+
+## Chapter 5: Data Analysis and Results
+
+### 5.1 Quantitative Analysis
+Statistical analysis of survey responses, including charts and graphs.
+
+### 5.2 Qualitative Insights
+Themes and patterns derived from interviews and case studies.
+
+### 5.3 Key Findings
+Summarization of significant trends and observations.
+
+---
+
+## Chapter 6: Discussion
+
+### 6.1 Implications for Communication
+Discussion of how social media alters personal and professional interactions.
+
+### 6.2 Mental Health Considerations
+Analysis of the psychological risks and benefits associated with social media.
+
+### 6.3 Sociopolitical Dynamics
+Evaluation of social media’s impact on activism and civic participation.
+
+### 6.4 Cultural Transformations
+Exploration of the balance between cultural preservation and globalization.
+
+---
+
+## Chapter 7: Conclusion
+
+### 7.1 Summary
+Recap of research objectives, methodology, and key findings.
+
+### 7.2 Final Thoughts
+Reflections on the transformative power of social media.
+
+---
+
+## Chapter 8: Recommendations
+
+1. Encourage digital literacy programs to combat misinformation.
+2. Advocate for mental health support tailored to social media users.
+3. Promote policies for ethical social media practices.
+4. Support research on emerging trends and technologies.
+
+---
+
+## Chapter 9: References
+
+[To include a comprehensive list of all sources cited in APA format.]
+
+---
+
+## Chapter 10: Appendices
+
+### 10.1 Questionnaire Example
+
+**Section 1: Demographics**
+1. Age:
+2. Gender:
+3. Occupation:
+
+**Section 2: Social Media Usage**
+1. How many hours per day do you spend on social media?
+2. Which platforms do you use most frequently?
+
+**Section 3: Impacts**
+1. Has social media improved your personal relationships? (Yes/No)
+2. Have you experienced any mental health issues related to social media? (Yes/No)
+3. Have you participated in any social or political campaigns through social media? (Yes/No)
+
+### 10.2 Interview Guide
+
+1. Can you describe how social media has impacted your daily life?
+2. What are your thoughts on the balance between social media’s benefits and drawbacks?
+3. Do you believe social media has influenced your cultural identity? How?
+
+---
+
+This outline provides a robust framework for a 65-page study on the impact of social media on society. Let me know if you'd like adjustments or additional sections!
+
+
+ 1. What is your gender?
+    A) Male    B) Female    C) Other
+	
+   Male = 62.7%
+   Female = 37.3%
+
+   Male = 69
+   Female = 41
+   
+   convert it percentage(%). there will be an one digit after decimal(.)
+   
+   
+ 2. How old are you?
+    A) under 18    B) 18-24    C) 25-34    D) 35+
+	
+	under 18 = 30.0%
+	18-24 = 47.3%
+	25-34 = 19.1%
+	35+ = 3.6%
+
+    total = 110
+    under 18 = 33
+	18-24 = 52
+	25-34 = 21
+	35+ = 4
+	convert it percentage(%). there will be an one digit after decimal(.)
+
+
+ 3. What is your highest level of education?
+    A) Less than high school    B) High school     
+     C) Bachelor’s degree        D) Other
+	 
+	Less than high school = 25.5%
+	High school = 35.5%
+	Bachelor’s degree = 38.2%
+	Other = 0.9%
+
+    total = 110
+    Less than high school = 28
+	High school = 39
+	Bachelor’s degree = 42
+	Other = 1
+	convert it percentage(%). there will be an one digit after decimal(.)
+
+
+5. What is the primary reason you use social media?
+   A) Entertainment B) Networking C) News and information D) Other
+   Entertainment = 63.7% (72)
+   Networking = 15% (17)
+   News and information = 19.5% (22)
+   Other = 1.8% (2)
+   
+   explain it for research data analysis.
+   
+   
+6. Which social media platform do you use the most?
+    A) Facebook       B) Youtube       C) Twitter (X)       D) TikTok      E) Other
+   Facebook= 54
+   Youtube= 26
+   Twitter(X)= 2
+   TikTok= 18
+   Other= 10
+   
+   Facebook= 49.1%
+   Youtube= 23.6%
+   Twitter(X)= 1.8%
+   TikTok= 16.4%
+   Other= 9.1%
+   
+   total = 110 
+  Facebook= 54
+   Youtube= 26
+   Twitter(X)= 2
+   TikTok= 18
+   Other= 10
+convert it percentage(%). there will be an one digit after decimal(.)
+
+
+7. Do you believe social media has a positive or negative effect on your mental health?
+   A) Mostly Positive  B) Mostly Negative C) No Effect           D) It Varies
+   
+   Mostly Positive: 28.2%
+   Mostly Negative: 63.6%
+   No Effect: 0.9%
+   It Varies: 7.3%
+   
+   total = 110 
+  Mostly Positive = 31
+  Mostly Negative = 70
+  No Effect =1
+  It Varies = 8
+  convert it percentage(%). there will be an one digit after decimal(.)
+  
+  
+  
+  8. Have you experienced any form of cyberbullying or online harassment?
+   A) Yes, frequently       B) Yes, a few times 
+   C) No, but I know someone who has    D) No, never
+   
+   Yes, frequently: 9.1%
+   Yes, a few times: 14.5%
+   No, but I know someone who has: 30.0%
+   No, never: 46.4%
+   
+   total = 110   
+   Yes, frequently = 10
+   Yes, a few times = 16
+   No, but I know someone who has = 33
+   No, never = 51
+    convert it percentage(%). there will be an one digit after decimal(.)
+	
+	
+  9. How often do you compare your life to others based on social media?
+    A) Frequently        B) Occasionally              C) Rarely           D) Never
+	
+	Frequently=16.4%
+    Occasionally= 41.8%
+    Rarely= 33.6%
+    Never= 8.2%
+	
+	describe it.
+	
+	total = 110   
+   Frequently=18
+   Occasionally=46
+   Rarely=37
+   Never=9
+   convert it percentage(%). there will be an one digit after decimal(.)
+   
+   
+   
+   10. Do you follow influencers or public figures for advice?
+     A) Yes, frequently    B) Occasionally      C) Rarely        D) Never
+	 
+	 Yes, frequently= 57.5%
+	 Occasionally= 30.1%
+	 Rarely= 8.8%
+	 Never= 3.5%
+	 
+	 Yes, frequently= 65
+	 Occasionally= 34
+	 Rarely= 10
+	 Never= 4
+	 
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	 
+	 11. How likely are you to purchase a product based on social media ads?
+         A) Very likely      B) Likely in some cases    C) Unlikely          D) Never
+		 
+		  Very likely = 34.5%
+		  Likely in some cases = 49.6%
+		  Unlikely = 8.8%
+		  Never= 7.1%
+
+        Very likely = 39
+		Likely in some cases = 56
+		Unlikely = 10
+		Never= 8
+		
+		convert it percentage(%). there will be an one digit after decimal(.)
+		
+		
+	
+	12. How often do you encounter misinformation or fake news on social media?
+      A) Rarely   B) Occasionally         C) Frequently    D) Very often
+	
+	
+      Rarely = 45.5%
+	  Occasionally = 39.1%
+	  Frequently = 10.0%
+	  Very often = 5.5%
+
+      total = 110
+      Rarely = 50
+	  Occasionally = 43
+	  Frequently = 11
+	  Very often = 6
+	  
+	  convert it percentage(%). there will be an one digit after decimal(.)
+	  
+	  
+  13. Have you had conflicts with friends or family due to social media posts?
+      A) Yes, often         B) Sometimes            C) Rarely            D) Never
+	  
+	  
+	 Yes, often = 14.5%
+	 Sometimes = 59.1%
+	 Rarely = 15.5%
+	 Never = 10.9%
+
+     total = 110
+	 Yes, often = 16
+	 Sometimes = 65
+	 Rarely = 17
+	 Never = 12
+	 
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	 
+	 
+  14. Do you feel that social media provides a platform for marginalized voices? 
+     A) Strongly agree   B) Agree C) Neutral  D) Disagree   E) Strongly disagree
+	 
+	  Strongly agree =   34.5%
+	  Agree = 48.2%
+	  Neutral = 15.5%
+	  Disagree = 1.8%
+	  Strongly disagree = 0.0%
+
+      total = 110 
+	  Strongly agree = 38
+	  Agree = 53
+	  Neutral = 17
+	  Disagree = 2 
+	  Strongly disagree = 0
+	  convert it percentage(%). there will be an one digit after decimal(.)
+	  
+	  
+	  
+ 15. Are you concerned about social media companies collecting your data?
+    A) Yes, very concerned
+    B) Somewhat concerned 
+    C) Not very concerned 
+    D) Not concerned at all
+	
+	Yes, very concerned = 46.4%
+	Somewhat concerned = 43.6%
+	Not very concerned = 9.1%
+	Not concerned at all = 0.9%
+	
+	total=110
+	Yes, very concerned = 51
+	Somewhat concerned = 48
+	Not very concerned = 10
+	Not concerned at all = 1
+	convert it percentage(%). there will be an one digit after decimal(.)
+	
+	
+	
+16. How careful are you about sharing personal information on social media?
+     A) Very careful
+     B) Somewhat careful
+     C) Not very careful             
+     D) Not careful at all
+	 
+	 Very careful = 48.2%
+     Somewhat careful= 36.4%
+     Not very careful= 13.6%           
+     Not careful at all= 1.8%
+	
+	
+	total=110
+	 Very careful = 53
+     Somewhat careful= 40 
+     Not very careful= 15            
+     Not careful at all= 2
+	convert it percentage(%). there will be an one digit after decimal(.)
+
+
+
+  17. Do you think social media has increased awareness of global issues?
+     A) Strongly agree   B) Agree C) Neutral  D) Disagree   E) Strongly disagree
+	 
+	  Strongly agree = 40.0%
+	  Agree = 48.2%
+	  Neutral = 11.8%
+	  Disagree = 0.0% 
+	  Strongly disagree = 0.0%
+	 
+	  Strongly agree = 44
+	  Agree = 53
+	  Neutral = 13
+	  Disagree = 0 
+	  Strongly disagree = 0
+	 
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	
+  18. Do you use privacy settings to control who sees your posts?
+     A) Yes, always          B) Sometimes       C) Rarely          D) Never
+	 
+	 Yes, always: 45.5%
+	 Sometimes: 48.2%
+	 Rarely: 5.5%
+	 Never: 0.9% ​
+     
+	 total=110
+	 Yes, always=50
+	 Sometimes=53
+	 Rarely=6
+	 Never=1
+	
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	 
+	 
+   19. Do you feel social media algorithms track your behavior too closely?
+     A) Yes, always      B) Sometimes           C) Rarely   D) No, not at all
+	 
+	  Yes, always= 55.5%
+	  Sometimes=36.4%
+	  Rarely=6.4%
+	  No, not at all = 1.8%
+
+      total=110
+      Yes, always=61
+	  Sometimes=40
+	  Rarely=7
+	  No, not at all = 2
+	  
+	  convert it percentage(%). there will be an one digit after decimal(.)
+	  
+	 
+	20. How often do you get news from social media?
+     A) Daily      B) A few times a week             C) Rarely     D) Never
+	 
+	  Daily: 85.5%
+	  A few times a week: 11.8%
+	  Rarely: 2.7%
+	  Never: 0.0%
+
+      total=110
+	  Daily = 94
+	  A few times a week=13
+	  Rarely=3
+	  Never=0
+	  
+	  convert it percentage(%). there will be an one digit after decimal(.)
+	  
+	  
+   21. How often do you participate in social media campaigns?
+     A) Rarely   B) Occasionally         C) Frequently    D) Very often
+	 
+	 Rarely: 49.1%
+	 Occasionally: 44.5%
+	 Frequently: 5.5%
+	 Very often: 0.9%
+
+     total=110
+	 Rarely=54
+	 Occasionally=49
+	 Frequently=6
+	 Very often=1
+	 
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	 
+  22. Have you been influenced by misinformation on social media?
+     A) Yes, frequently          B) Sometimes             C) Rarely        D) Never
+	 
+	 Yes, frequently: 42.7%
+	 Sometimes: 49.1%
+	 Rarely: 7.3%
+	 Never: 0.9%
+
+     total = 110
+	 Yes, frequently=47
+	 Sometimes=54
+	 Rarely=8
+	 Never=1
+	 
+	 convert it percentage(%). there will be an one digit after decimal(.)
+	 
+	 
+  23. Do you think social media has changed how people interact in real life?
+     A) Yes, significantly         B) Yes, somewhat
+      C) Neutral   D) No, not much  E)  No, not at all
+
+	  Yes, significantly: 44.5%
+	  Yes, somewhat: 47.3%
+	  Neutral: 6.4%
+	  No, not much: 1.8%
+	  No, not at all: 0.0%
+   
+    Yes, significantly = 49 
+    Yes, somewhat = 52	
+	Neutral = 7
+	No, not much = 2
+	No, not at all = 0
+	
+	convert it percentage(%). there will be an one digit after decimal(.)
+
+	 
+	 
+
+❤❤1. What is your gender?
+The data shows that a majority of respondents (62.7%) identify as male, while a smaller percentage (37.3%) identify as female. This suggests a higher male representation in the sample compared to females, though there is still a notable presence of female respondents.
+
+❤❤2. How old are you?
+The majority of respondents (47.3%) fall within the 18-24 age group, indicating a younger population in the sample. A significant portion (30.0%) is under 18, while 19.1% are aged 25-34, and only 3.6% are 35 or older. This shows that the majority of participants are relatively young.
+
+
+🧡🧡3. What is your highest level of education?
+The data on education levels shows the following distribution: 25.5% have less than high school education, 35.5% are high school graduates, 38.2% hold a bachelor’s degree, and 0.9% fall into other categories. This indicates the majority have at least a high school education, with the largest group being bachelor's degree holders.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+❤❤ 4.How many hours per day do you spend on social media?
+The analysis of daily social media usage reveals the following distribution: 10.6% spend less than 1 hour, 36.3% spend 1–3 hours, 38.9% spend 4–6 hours, and 14.2% spend more than 6 hours. The majority of respondents, totaling 75.2%, spend 1–6 hours on social media, with the largest group in the 4–6 hours range, indicating a significant engagement with social media platforms.
+
+❤❤ 5. What is the primary reason you use social media?
+The analysis of primary reasons for social media use indicates that 63.7% use it for entertainment, making it the dominant purpose. 19.5% use it for news and information, while 15% use it for networking. A small percentage (1.8%) reported other reasons. These findings highlight that entertainment is the primary driver of social media engagement, with informational and networking purposes being secondary.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+❤❤6. Which social media platform do you use the most?
+The analysis of preferred social media platforms shows that Facebook is the most used platform (49.1%), followed by YouTube (23.6%) and TikTok (16.4%). Usage of Twitter (X) is significantly lower at 1.8%, and 9.1% of respondents use other platforms. This indicates that Facebook remains the dominant platform, while YouTube and TikTok also hold notable shares. Twitter's low usage suggests limited appeal or niche usage compared to other platforms.
+
+
+❤❤7. Do you believe social media has a positive or negative effect on your mental health?
+The data of perceptions regarding social media's impact on mental health reveals that 63.6% believe it has a mostly negative effect, making this the dominant response. 28.2% view it as mostly positive, while a smaller percentage (7.3%) feel its impact varies. Only 0.9% report no effect. These findings suggest that a majority associate social media use with negative mental health outcomes, though a significant minority perceive positive effects or situational variation.
+
+
+❤❤8. Have you experienced any form of cyberbullying or online harassment?
+The analysis of experiences related to cyberbullying or online harassment shows that 46.4% of respondents have never experienced it, while 30.0% know someone who has been affected. 14.5% have experienced it a few times, and 9.1% have faced it frequently. The majority (76.4%) either have not experienced it directly or know someone who has, while a smaller portion has encountered it at least once. This highlights varying levels of exposure to cyberbullying or online harassment.
+
+
+❤❤ 9. How often do you compare your life to others based on social media?
+The majority of people occasionally compare their lives to others on social media, with 41.8% doing so sometimes. Another significant portion, 33.6%, rarely engages in such comparisons. A smaller group, 16.4%, frequently compares their lives, while only 8.2% never do.
+
+
+❤❤ 10. Do you follow influencers or public figures for advice?
+The majority of people follow influencers or public figures for advice frequently (57.5%) or occasionally (30.1%). A smaller portion rarely turns to influencers (8.8%), while only a small group never follows them for advice (3.5%).
+
+
+❤❤ 11. How likely are you to purchase a product based on social media ads?
+The data indicates that 84.1% of respondents ("Very likely" and "Likely in some cases") are influenced by social media ads, with the largest group (49.6%) being selective about their purchases. A smaller portion (15.9%) is resistant, citing skepticism or alternative preferences. Overall, social media ads are effective but require targeted and trustworthy strategies to maximize impact.
+
+
+❤❤ 12. How often do you encounter misinformation or fake news on social media?
+The data reveals that the majority of respondents (84.6%, "Rarely" and "Occasionally") encounter misinformation or fake news on social media infrequently, with "Rarely" being the most common at 45.5%. A smaller group (15.5%, "Frequently" and "Very often") reports encountering fake news more regularly, highlighting its presence but lower frequency. This suggests that while misinformation exists, most users perceive it as an occasional rather than a constant issue.
+
+❤❤ 13. Have you had conflicts with friends or family due to social media posts?
+The data shows that a majority of respondents (59.1%) "Sometimes" experience conflicts with friends or family due to social media posts, while 14.5% report conflicts "Yes, often." A smaller portion (15.5%) encounters conflicts "Rarely," and 10.9% "Never" face such issues. This suggests that social media posts can occasionally strain relationships but are not a frequent source of conflict for most people.
+
+ ❤❤ 14. Do you feel that social media provides a platform for marginalized voices? 
+The majority of respondents feel that social media provides a platform for marginalized voices, with 82.7% either strongly agreeing or agreeing. Only a small percentage (1.8%) disagrees, and no one strongly disagrees. This shows broad recognition of social media’s role in giving marginalized communities a voice.
+
+❤❤15. Are you concerned about social media companies collecting your data?
+The majority of respondents are concerned about social media companies collecting their data, with 90.0% either very or somewhat concerned. Only 9.1% are not very concerned, and a small group (0.9%) is not concerned at all. This reflects widespread awareness and worry about privacy on social media platforms.
+
+	
+❤❤ 16. How careful are you about sharing personal information on social media?
+A significant portion of respondents (84.6%) are careful about sharing personal information on social media, with 48.2% being very careful and 36.4% somewhat careful. In contrast, a smaller group (13.6%) is less mindful, while only 1.8% do not consider privacy at all when sharing personal details. This indicates that most users are cautious about protecting their information on social platforms.
+
+
+❤❤ 17. Do you think social media has increased awareness of global issues?
+A large majority of respondents, totaling 88.2%, feel that social media has helped increase awareness of global issues. Specifically, 40.0% strongly agree, and 48.2% agree. A smaller group (11.8%) remains neutral, while no one disagrees or strongly disagrees, indicating widespread recognition of social media's impact on global awareness.
+
+
+❤❤ 18. Do you use privacy settings to control who sees your posts?
+A significant majority of respondents, 93.7%, manage their privacy settings to some extent, with 45.5% consistently controlling who can view their posts. In contrast, only 6.4% rarely or never modify their privacy settings. This indicates that most users are conscious of their privacy and prefer to customize it accordingly.
+
+
+❤❤ 19. Do you feel social media algorithms track your behavior too closely?
+Most respondents, 91.9%, believe social media algorithms track their behavior to some degree, with 55.5% feeling it happens consistently. A smaller portion, 6.4%, think the tracking occurs only rarely, while just 1.8% do not feel their behavior is tracked at all. This indicates that many users are conscious of, and likely concerned about, the extent of monitoring by social media platforms.
+
+
+
+❤❤ 20. How often do you get news from social media?
+A large portion of respondents, 85.5%, receive news from social media every day, reflecting its dominant role in how people stay informed. A smaller percentage, 11.8%, check news on social media a few times a week, while only 2.7% do so rarely. Interestingly, no one reported never getting news from social media, highlighting its strong impact on daily news consumption.
+
+
+❤❤ 21. How often do you participate in social media campaigns?
+Most respondents, 93.6%, participate in social media campaigns at least occasionally, with 49.1% doing so rarely. A smaller group, 5.5%, participate frequently, while only 0.9% engage in campaigns very often. This indicates that while social media campaigns attract participation from many, frequent involvement is relatively low.
+
+
+❤❤ 22. Have you been influenced by misinformation on social media?
+A significant portion of respondents, 91.8%, have been influenced by misinformation on social media, with 42.7% experiencing it frequently. While 49.1% have been affected sometimes, only 7.3% report being influenced rarely. A small group, 0.9%, claim they have never been influenced by misinformation, indicating that most users are aware of the potential impact of false information on social media.
+
+
+❤❤ 23. Do you think social media has changed how people interact in real life?
+Most respondents, 91.8%, think social media has changed real-life interactions, with 44.5% indicating a significant shift and 47.3% observing a more moderate change. A small group, 6.4%, remains indifferent, while 1.8% feel the impact is minimal, and none believe social media has had no influence. This shows that a strong majority sees social media as an influential factor in how people connect in person.
+
+
+
+
+
+
+
