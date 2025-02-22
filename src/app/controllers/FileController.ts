@@ -4,7 +4,7 @@ import DeleteFileService from "../services/file/DeleteFileService";
 import DuplicateFileOrFolderService from "../services/file/DuplicateFileOrFolderService";
 import RenameFileOrFolderService from "../services/file/RenameFileOrFolderService";
 import FilterFileOrFolderService from "../services/file/FilterFileOrFolderService";
-import GetFileAndFolderSummaryService from "../services/summary/GetFileSummaryByTypeService";
+import GetFileAndFolderSummaryService from "../services/summary/GetFileAndFolderSummaryService";
 import GetStorageSummaryService from "../services/summary/GetStorageSummaryService";
 import uploaToCloudinary from "../utils/uploaToCloudinary";
 
@@ -15,7 +15,7 @@ const uploadFile = async (req:Request, res: Response) => {
     try {
         if(req.file){
             
-
+         //for local machine file path
          const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
 
          let type: string='';
@@ -32,15 +32,14 @@ const uploadFile = async (req:Request, res: Response) => {
          }
          
      
-            //file upload to cloudinary
-          // const cloudinaryRes = await uploaToCloudinary(req.file?.path);
-          // console.log(cloudinaryRes);
+        //file upload to cloudinary
+          const cloudinaryRes = await uploaToCloudinary(req.file?.path);
 
             //insert to database
             const newFile = {
                 name: req?.file.filename.split('.')[0],
                 filename: req?.file.filename,
-                path: path_url, //or path_url
+                path: cloudinaryRes?.secure_url, //or path:path_url
                 type,
                 size: req?.file.size,
                 user: loginUserId

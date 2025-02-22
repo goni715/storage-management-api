@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const multer_1 = __importDefault(require("multer"));
 const storage = multer_1.default.diskStorage({
     //comment-out for vercel server
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/');
-    },
+    //   destination: (req, file, cb) => {
+    //       cb(null, 'uploads/');
+    //   },
     filename: (req, file, cb) => {
         console.log(file.mimetype);
         console.log(file);

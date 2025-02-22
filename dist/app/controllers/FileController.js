@@ -18,12 +18,15 @@ const DeleteFileService_1 = __importDefault(require("../services/file/DeleteFile
 const DuplicateFileOrFolderService_1 = __importDefault(require("../services/file/DuplicateFileOrFolderService"));
 const RenameFileOrFolderService_1 = __importDefault(require("../services/file/RenameFileOrFolderService"));
 const FilterFileOrFolderService_1 = __importDefault(require("../services/file/FilterFileOrFolderService"));
-const GetFileSummaryByTypeService_1 = __importDefault(require("../services/summary/GetFileSummaryByTypeService"));
+const GetFileAndFolderSummaryService_1 = __importDefault(require("../services/summary/GetFileAndFolderSummaryService"));
 const GetStorageSummaryService_1 = __importDefault(require("../services/summary/GetStorageSummaryService"));
+const uploaToCloudinary_1 = __importDefault(require("../utils/uploaToCloudinary"));
 const uploadFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
     const loginUserId = req.headers.id;
     try {
         if (req.file) {
+            //for local machine file path
             const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
             let type = '';
             if (req.file.mimetype.split('/')[0] === "image") {
@@ -36,13 +39,12 @@ const uploadFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                 type = "note";
             }
             //file upload to cloudinary
-            // const cloudinaryRes = await uploaToCloudinary(req.file?.path);
-            // console.log(cloudinaryRes);
+            const cloudinaryRes = yield (0, uploaToCloudinary_1.default)((_a = req.file) === null || _a === void 0 ? void 0 : _a.path);
             //insert to database
             const newFile = {
                 name: req === null || req === void 0 ? void 0 : req.file.filename.split('.')[0],
                 filename: req === null || req === void 0 ? void 0 : req.file.filename,
-                path: path_url, //or path_url
+                path: cloudinaryRes === null || cloudinaryRes === void 0 ? void 0 : cloudinaryRes.secure_url, //or path:path_url
                 type,
                 size: req === null || req === void 0 ? void 0 : req.file.size,
                 user: loginUserId
@@ -95,7 +97,7 @@ exports.filterFileOrFolder = filterFileOrFolder;
 const getFileAndFolderSummary = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const type = req.params.type;
     const loginUserId = req.headers.id;
-    yield (0, GetFileSummaryByTypeService_1.default)(res, type, loginUserId);
+    yield (0, GetFileAndFolderSummaryService_1.default)(res, type, loginUserId);
 });
 exports.getFileAndFolderSummary = getFileAndFolderSummary;
 //getstorage summary

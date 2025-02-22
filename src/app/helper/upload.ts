@@ -3,9 +3,9 @@ import multer from "multer";
 
 const storage = multer.diskStorage({
   //comment-out for vercel server
-  destination: (req, file, cb) => {
-      cb(null, 'uploads/');
-  },
+//   destination: (req, file, cb) => {
+//       cb(null, 'uploads/');
+//   },
   filename: (req, file, cb) => {
 
    console.log(file.mimetype);
