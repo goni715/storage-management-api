@@ -33,9 +33,9 @@ const DeleteFileService = async (
 
     //if duplicate file doesn't exist
      //delete file from local machine
-    if(!duplicateFileExist) {
-        fs.unlinkSync(`uploads\\${file.filename}`);
-    }
+    //if(!duplicateFileExist) {
+        //fs.unlinkSync(`uploads\\${file.filename}`);
+    //}
 
    
 

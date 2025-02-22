@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const cloudinary_1 = __importDefault(require("../helper/cloudinary"));
 const uploaToCloudinary = (path) => __awaiter(void 0, void 0, void 0, function* () {
-    // Upload an image
+    // Upload
     const uploadResult = yield cloudinary_1.default.uploader
         .upload(path, {
         folder: "storage-management"

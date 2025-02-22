@@ -15,7 +15,7 @@ const uploadFile = async (req:Request, res: Response) => {
     try {
         if(req.file){
 
-         //const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
+         const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
 
          let type: string='';
          if(req.file.mimetype.split('/')[0] === "image"){
@@ -38,7 +38,7 @@ const uploadFile = async (req:Request, res: Response) => {
             const newFile = {
                 name: req?.file.filename.split('.')[0],
                 filename: req?.file.filename,
-                path: cloudinaryRes?.secure_url,
+                path: path_url, //or path_url
                 type,
                 size: req?.file.size,
                 user: loginUserId
@@ -46,7 +46,7 @@ const uploadFile = async (req:Request, res: Response) => {
 
 
             const result = await FileFolderModel.create(newFile);
-            res.status(201).json({success: true, message: 'File uploaded successfully', data: result, cloudinaryRes });
+            res.status(201).json({success: true, message: 'File uploaded successfully', data: result });
             
         }else{
              res.status(404).json({

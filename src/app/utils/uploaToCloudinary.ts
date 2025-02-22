@@ -3,7 +3,7 @@ import cloudinary from '../helper/cloudinary';
 
 const uploaToCloudinary = async (path: string) => {
     
-    // Upload an image
+    // Upload
     const uploadResult = await cloudinary.uploader
       .upload(
            path,{ 
