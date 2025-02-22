@@ -13,7 +13,7 @@ router.put('/rename-file-or-folder', AuthMiddleware, renameFileOrFolder);
 router.get('/filter-file-or-folder/:type', AuthMiddleware, filterFileOrFolder);
 
 router.delete('/delete-file/:fileId', AuthMiddleware, deleteFile);
-router.get('/get-file-and-folder-summary/:type', AuthMiddleware, getFileAndFolderSummary);
+router.get('/get-file-and-folder-summary', AuthMiddleware, getFileAndFolderSummary);
 router.get('/get-storage-summary', AuthMiddleware, getStorageSummary);
 
 

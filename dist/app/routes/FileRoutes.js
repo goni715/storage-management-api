@@ -14,6 +14,6 @@ router.post('/duplicate-file-or-folder/:fileOrFolderId', AuthMiddleware_1.defaul
 router.put('/rename-file-or-folder', AuthMiddleware_1.default, FileController_1.renameFileOrFolder);
 router.get('/filter-file-or-folder/:type', AuthMiddleware_1.default, FileController_1.filterFileOrFolder);
 router.delete('/delete-file/:fileId', AuthMiddleware_1.default, FileController_1.deleteFile);
-router.get('/get-file-and-folder-summary/:type', AuthMiddleware_1.default, FileController_1.getFileAndFolderSummary);
+router.get('/get-file-and-folder-summary', AuthMiddleware_1.default, FileController_1.getFileAndFolderSummary);
 router.get('/get-storage-summary', AuthMiddleware_1.default, FileController_1.getStorageSummary);
 exports.default = router;
