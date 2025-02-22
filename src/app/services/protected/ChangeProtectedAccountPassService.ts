@@ -42,7 +42,7 @@ const ChangeProtectedAccountPassService = async (
 
     //update the password
     await ProtectedModel.updateOne(
-      { _id: new ObjectId(loginUserId) },
+      { user: new ObjectId(loginUserId) },
       { password: hashPass }
     );
 

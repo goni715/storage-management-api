@@ -39,7 +39,7 @@ const ChangeProtectedAccountPassService = (res, loginUserId, payload) => __await
         //hash the newPassword
         const hashPass = yield (0, hashedPassword_1.default)(newPassword);
         //update the password
-        yield ProtectedModel_1.default.updateOne({ _id: new ObjectId(loginUserId) }, { password: hashPass });
+        yield ProtectedModel_1.default.updateOne({ user: new ObjectId(loginUserId) }, { password: hashPass });
         res.status(200).json({
             success: true,
             message: "Protected Account Password is updated successfully",

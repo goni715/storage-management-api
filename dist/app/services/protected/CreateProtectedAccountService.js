@@ -30,7 +30,7 @@ const CreateProtectedAccountService = (res, password, loginUserId) => __awaiter(
         });
         res.status(201).json({
             success: true,
-            message: "User is registered successfully",
+            message: "Protected Account is created successfully",
             data: result
         });
     }

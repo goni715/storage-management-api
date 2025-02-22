@@ -20,7 +20,7 @@ const CreateProtectedAccountService = async (res:Response, password: string, log
 
     res.status(201).json({
       success: true,
-      message: "User is registered successfully",
+      message: "Protected Account is created successfully",
       data: result
     });
 
