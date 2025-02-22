@@ -1,7 +1,7 @@
 import fs from 'fs';
 import cloudinary from '../helper/cloudinary';
 
-const uploadImageToCloudinary = async (path: string) => {
+const uploaToCloudinary = async (path: string) => {
     
     // Upload an image
     const uploadResult = await cloudinary.uploader
@@ -21,4 +21,4 @@ const uploadImageToCloudinary = async (path: string) => {
 }
 
 
-export default uploadImageToCloudinary;
+export default uploaToCloudinary;

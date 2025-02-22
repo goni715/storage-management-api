@@ -20,13 +20,13 @@ const RenameFileOrFolderService_1 = __importDefault(require("../services/file/Re
 const FilterFileOrFolderService_1 = __importDefault(require("../services/file/FilterFileOrFolderService"));
 const GetFileSummaryByTypeService_1 = __importDefault(require("../services/summary/GetFileSummaryByTypeService"));
 const GetStorageSummaryService_1 = __importDefault(require("../services/summary/GetStorageSummaryService"));
-const uploadImageToCloudinary_1 = __importDefault(require("../utils/uploadImageToCloudinary"));
+const uploaToCloudinary_1 = __importDefault(require("../utils/uploaToCloudinary"));
 const uploadFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const loginUserId = req.headers.id;
     try {
         if (req.file) {
-            const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+            //const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
             let type = '';
             if (req.file.mimetype.split('/')[0] === "image") {
                 type = "image";
@@ -37,16 +37,18 @@ const uploadFile = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             if (req.file.mimetype.split('/')[0] !== "image" && req.file.originalname.split('.')[1] !== "pdf") {
                 type = "note";
             }
+            //file upload to cloudinary
+            const cloudinaryRes = yield (0, uploaToCloudinary_1.default)((_a = req.file) === null || _a === void 0 ? void 0 : _a.path);
+            //insert to database
             const newFile = {
                 name: req === null || req === void 0 ? void 0 : req.file.filename.split('.')[0],
                 filename: req === null || req === void 0 ? void 0 : req.file.filename,
-                path: path_url,
+                path: cloudinaryRes === null || cloudinaryRes === void 0 ? void 0 : cloudinaryRes.secure_url,
                 type,
                 size: req === null || req === void 0 ? void 0 : req.file.size,
                 user: loginUserId
             };
             const result = yield FileFolderModel_1.default.create(newFile);
-            const cloudinaryRes = yield (0, uploadImageToCloudinary_1.default)((_a = req.file) === null || _a === void 0 ? void 0 : _a.path);
             res.status(201).json({ success: true, message: 'File uploaded successfully', data: result, cloudinaryRes });
         }
         else {

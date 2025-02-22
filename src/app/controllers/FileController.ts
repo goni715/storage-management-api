@@ -6,7 +6,7 @@ import RenameFileOrFolderService from "../services/file/RenameFileOrFolderServic
 import FilterFileOrFolderService from "../services/file/FilterFileOrFolderService";
 import GetFileAndFolderSummaryService from "../services/summary/GetFileSummaryByTypeService";
 import GetStorageSummaryService from "../services/summary/GetStorageSummaryService";
-import uploadImageToCloudinary from "../utils/uploadImageToCloudinary";
+import uploaToCloudinary from "../utils/uploaToCloudinary";
 
 
 const uploadFile = async (req:Request, res: Response) => {
@@ -15,7 +15,8 @@ const uploadFile = async (req:Request, res: Response) => {
     try {
         if(req.file){
 
-         const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+         //const path_url = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; //for local machine
+
          let type: string='';
          if(req.file.mimetype.split('/')[0] === "image"){
             type="image"
@@ -29,19 +30,22 @@ const uploadFile = async (req:Request, res: Response) => {
             type="note"
          }
          
-    
+     
+            //file upload to cloudinary
+            const cloudinaryRes = await uploaToCloudinary(req.file?.path);
 
+            //insert to database
             const newFile = {
                 name: req?.file.filename.split('.')[0],
                 filename: req?.file.filename,
-                path: path_url,
+                path: cloudinaryRes?.secure_url,
                 type,
                 size: req?.file.size,
                 user: loginUserId
             };
-     
+
+
             const result = await FileFolderModel.create(newFile);
-            const cloudinaryRes = await uploadImageToCloudinary(req.file?.path);
             res.status(201).json({success: true, message: 'File uploaded successfully', data: result, cloudinaryRes });
             
         }else{
